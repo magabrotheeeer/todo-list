@@ -1,10 +1,12 @@
 package main
 
 import (
-	"github.com/magabrotheeeer/todo-list/internal/linkedlist"
+	"todo-list/internal/linkedlist"
 	"fmt"
 )
 
 func main() {
-	x := NewLinkedList()	
+	x := linkedlist.NewLinkedList("asd")
+	x.AddNewNode()
+	fmt.Println(x)	
 }

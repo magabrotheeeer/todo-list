@@ -25,6 +25,9 @@ func NewLinkedList(content string) *LinkedList {
 	}
 	return resLinkedList
 }
+func NewNode() *Node {
+		
+}
 
 func (list *LinkedList) AddNewNode(node *Node) {
 	list.tail_ = node

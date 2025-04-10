@@ -1,3 +1,3 @@
-module github.com/magabrotheeeer/todo-list
+module todo-list
 
 go 1.23.1
