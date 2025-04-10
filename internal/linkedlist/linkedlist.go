@@ -1,28 +1,32 @@
 package linkedlist
 
-import (
-	"time"
-)
-
 type Node struct {
-	Content   string
-	Next      *Node
-	StartTime time.Time
-	EndTime   time.Time
+	content_ string
+	next_    *Node
+	isEnd_   bool
 }
 
 type LinkedList struct {
-	Head *Node
-	Size int
-	Tail *Node
+	head_ *Node
+	size_ int
+	tail_ *Node
 }
 
-func (list *LinkedList) AddNewNode(NewContent string) {
-	newNode := &Node{Content: NewContent, Next: nil}
-	if list.Head == nil {
-		list.Head = newNode
-	} else {
-		list.Tail = newNode
+func NewLinkedList(content string) *LinkedList {
+	initNode := &Node{
+		content_: content,
+		next_:    nil,
+		isEnd_:   false,
 	}
-	list.Size++
+	resLinkedList := &LinkedList{
+		head_: initNode,
+		size_: 1,
+		tail_: initNode,
+	}
+	return resLinkedList
+}
+
+func (list *LinkedList) AddNewNode(node *Node) {
+	list.tail_ = node
+	list.size_++
 }
