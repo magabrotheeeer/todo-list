@@ -1,9 +1,10 @@
 package main
 
 import (
-	"todo-list/linkedlist"
+	"github.com/magabrotheeeer/todo-list/internal/linkedlist"
+	"fmt"
 )
 
 func main() {
-
+	x := NewLinkedList()	
 }
